@@ -72,7 +72,10 @@ if(process.env.NODE_ENV === 'production'){
         new webpack.optimize.CommonsChunkPlugin('common', 'common.[hash].js'),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: false,
-            mangle: true
+            mangle: true,
+            compress: {
+                warnings: false
+            }
         })
     )
 }
