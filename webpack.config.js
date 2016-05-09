@@ -48,6 +48,7 @@ var config = {
         ]
     },
     plugins: [
+        new ExtractTextPlugin('style.[hash].css'),
         new htmlWebpack({
             template: './index.html'
         })
@@ -68,7 +69,6 @@ var config = {
 if(process.env.NODE_ENV === 'production'){
     config.output.filename = '[name].[hash].js';
     config.plugins.push(
-        new ExtractTextPlugin('style.[hash].css'),
         new webpack.optimize.CommonsChunkPlugin('common', 'common.[hash].js'),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: false,
