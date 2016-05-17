@@ -68,11 +68,17 @@ var config = {
 //修改发布环境配置
 if(process.env.NODE_ENV === 'production'){
     config.output.filename = '[name].[hash].js';
+    config.plugins.splice(0, 1 , new ExtractTextPlugin('style.[hash].css'));
     config.plugins.push(
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': '"production"'
+        }),
         new webpack.optimize.CommonsChunkPlugin('common', 'common.[hash].js'),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: false,
-            mangle: true,
+            mangle: {
+                except: ['$super', '$', 'exports', 'require']
+            },
             compress: {
                 warnings: false
             }
