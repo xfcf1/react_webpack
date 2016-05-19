@@ -1,5 +1,5 @@
 import React from 'react';
-import 'antd/style/index.less';
+import 'antd/dist/antd.css';
 import { DatePicker } from 'antd';
 import { Link } from 'react-router';
 import '../style.css';

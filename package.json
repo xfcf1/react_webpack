@@ -6,11 +6,12 @@
     "build": "rimraf ./dist && NODE_ENV=production webpack"
   },
   "dependencies": {
-    "antd": "^0.12.16",
-    "react": "^0.14.8",
-    "react-dom": "^0.14.8",
+    "antd": "^1.1.0",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
+    "react-tap-event-plugin": "^1.0.0",
     "react-weui-to-mobile": "0.0.11",
     "redux": "^3.5.2",
     "redux-thunk": "^2.0.1"
