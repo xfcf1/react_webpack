@@ -10,6 +10,7 @@ const router = (
         <IndexRoute component={Index}></IndexRoute>
         <Route path="/index" component={Index}></Route>
         <Route path="/test" component={Test}></Route>
+        <Route path="*" component={Index}></Route>
     </Route>
 )
 export default router;
