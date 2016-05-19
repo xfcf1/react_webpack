@@ -1,4 +1,4 @@
-# react 14.8 + react router + thunk + page animate + ant design
+# react 15 + react router + thunk + page animate + ant design
 精简配置版
 
 启动 端口为3001
