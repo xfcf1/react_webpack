@@ -1,17 +1,22 @@
 import React from 'react';
-import 'antd/dist/antd.css';
 import { DatePicker } from 'antd';
 import { Link } from 'react-router';
-import '../style.css';
+import Page from './page.jsx';
+import { withRouter } from 'react-router'
 
-export default class Index extends React.Component{
+class Index extends React.Component{
+    click(){
+        this.props.router.push({pathname: 'test', query: {id: '123'} });
+    }
     render(){
         return(
-            <section>
-                <h1>index</h1>
+            <Page>
+                <h1>Home</h1>
+                <div onClick={()=>{this.click()}}>click to test page</div>
                 <Link to="test">link to test page</Link><br/>
                 <DatePicker/>
-            </section>
+            </Page>
         )
     }
 }
+export default withRouter(Index);
