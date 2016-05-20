@@ -1,12 +1,13 @@
 import 'whatwg-fetch';
 import $ from 'jquery'
 
+const domain = '';
 export default function requireData(url, data, success, method='GET'){
     let param = { method:method };
     if(data){
         param.body = JSON.stringify(data);
     }
-    fetch(url, param)
+    fetch(`${domain}${url}`, param)
         .then(checkStatus)
         .then(parseJSON)
         .then((json) => {
@@ -34,7 +35,6 @@ function parseJSON(response) {
 
 export function ajaxData(url, data, success, method='GET'){
     data = data ? JSON.stringify(data) : '';
-    const domain = localStorage.getItem('domain');
     $.ajax(`${domain}${url}`, {
         method: method,
         dataType: 'JSON',
