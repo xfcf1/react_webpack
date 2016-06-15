@@ -48,7 +48,7 @@ var config = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('style.[hash].css'),
+        new ExtractTextPlugin('style.css'),
         new htmlWebpack({
             template: './index.html'
         })
