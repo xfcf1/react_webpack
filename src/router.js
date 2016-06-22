@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import Main from './component/main.jsx';
-import Index from './component/index.jsx';
-import Test from './component/test.jsx';
+import Main from './components/main.jsx';
+import Index from './components/index.jsx';
+import Test from './components/test.jsx';
 
 const router = (
     <Route path="/" component={Main}>
