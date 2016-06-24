@@ -8,4 +8,4 @@ import router from './router';
 // useRouterHistory creates a composable higher-order function
 //const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
 
-ReactDom.render(<Router history={browserHistory}>{router}</Router>, document.getElementById('content'));
+ReactDom.render(<Router history={hashHistory}>{router}</Router>, document.getElementById('content'));

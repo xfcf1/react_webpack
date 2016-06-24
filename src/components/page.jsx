@@ -8,7 +8,7 @@ import { withRouter } from 'react-router'
 class Page extends React.Component{
     render(){
         return(
-            <section className={'page ' + this.props.className}>
+            <section className={'page ' + (this.props.className || '')}>
                 {this.props.children}
             </section>
         )
