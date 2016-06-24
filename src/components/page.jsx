@@ -3,13 +3,18 @@ import '../../node_modules/antd/dist/antd.css';
 import { DatePicker } from 'antd';
 import { Link } from 'react-router';
 import '../style.css';
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router';
+import QueueAnim from 'rc-queue-anim';
 
 class Page extends React.Component{
     render(){
         return(
             <section className={'page ' + (this.props.className || '')}>
-                {this.props.children}
+                <QueueAnim>
+                    <div key="1">
+                        {this.props.children}
+                    </div>
+                </QueueAnim>
             </section>
         )
     }
