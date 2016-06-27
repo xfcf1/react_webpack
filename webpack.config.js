@@ -67,8 +67,8 @@ var config = {
 
 //修改发布环境配置
 if(process.env.NODE_ENV === 'production'){
-    config.output.filename = '[name].[hash:6].js';
-    config.plugins.splice(0, 1 , new ExtractTextPlugin('style.[hash:6].css'));
+    config.output.filename = '[name].[chunkhash:6].js';
+    config.plugins.splice(0, 1 , new ExtractTextPlugin('style.[chunkhash:6].css'));
     config.plugins.push(
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"production"'
