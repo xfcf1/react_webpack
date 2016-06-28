@@ -30,7 +30,7 @@ var config = {
                 loader: 'babel',
                 query: {
                     presets: ['es2015', 'react', 'stage-0'],
-                    plugins: ['antd']
+                    plugins: [['antd', {style: 'css'}]]
                 }
             },
             {
@@ -75,10 +75,6 @@ if(process.env.NODE_ENV === 'production'){
         }),
         new webpack.optimize.CommonsChunkPlugin({names: ['common']}),
         new webpack.optimize.UglifyJsPlugin({
-            sourceMap: false,
-            mangle: {
-                except: ['$super', '$', 'exports', 'require']
-            },
             compress: {
                 warnings: false
             }
