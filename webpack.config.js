@@ -61,6 +61,7 @@ var config = {
                 host: 'xxx'
             }
         },
+        host:'0.0.0.',
         historyApiFallback: true
     }
 }
