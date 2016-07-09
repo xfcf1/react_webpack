@@ -10,7 +10,6 @@ export default function requireData(url, data={}, success, method='POST'){
         data = data ? JSON.stringify(data) : '';
         Zepto.ajax({
             url: `${domain}${url}`,
-            headers: {'Content-Type': 'application/json'},
             type: method,
             dataType: 'json',
             data: data,
