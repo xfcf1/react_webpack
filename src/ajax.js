@@ -1,5 +1,5 @@
 import 'zepto/zepto.min';
-const domain = 'https://itzzqa.rajax.me';
+const domain = '';
 import { isLoading, isError } from './actions/modal';
 
 export default function requireData(url, data={}, success, method='POST'){
