@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-
-function demo(state=''){
-    return state;
-}
+import { loading, error } from './modal';
 
 const app = combineReducers({
-    demo
+    loading,
+    error
 });
 export default app;
